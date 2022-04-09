@@ -13,13 +13,15 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import basemod.abstracts.CustomCard;
 
+import static LockHowl.DefaultMod.makeCardPath;
+
 public class Flare extends CustomCard {
     public static final String ID = "LockHowl:Flare";
     private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     // Get object containing the strings that are displayed in the game.
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String IMG_PATH = "img/my_card_img.png";
+    public static final String IMG_PATH = makeCardPath("Attack.png");
     private static final int COST = 0;
     private static final int ATTACK_DMG = 3;
     private static final int UPGRADE_PLUS_DMG = 3;
@@ -36,8 +38,6 @@ public class Flare extends CustomCard {
         this.setBackgroundTexture("img/custom_background_small.png", "img/custom_background_large.png");
 
         this.setOrbTexture("img/custom_orb_small.png", "img/custom_orb_large.png");
-
-        this.setBannerTexture("img/custom_banner_large.png", "img/custom_banner_large.png");
     }
 
     @Override

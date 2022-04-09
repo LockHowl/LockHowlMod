@@ -53,5 +53,9 @@
   "LockHowl:Flare": {
     "NAME": "Throw Flare",
     "DESCRIPTION": "Deal !D! damage. Apply !M! Vulnerable."
+  },
+  "LockHowl:Singe": {
+    "NAME": "Singe",
+    "DESCRIPTION": "Apply !M! poison. Deal damage equal to poison."
   }
 }

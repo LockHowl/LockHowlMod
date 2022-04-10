@@ -57,5 +57,9 @@
   "LockHowl:Singe": {
     "NAME": "Singe",
     "DESCRIPTION": "Apply !M! poison. Deal damage equal to poison."
+  },
+  "LockHowl:Shape": {
+    "NAME": "Lethal Shape",
+    "DESCRIPTION": "Permanently upgrade a card in your hand and exhaust it. Exhaust."
   }
 }

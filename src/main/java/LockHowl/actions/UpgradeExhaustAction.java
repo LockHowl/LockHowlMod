@@ -84,6 +84,7 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                 return;
             }
 
+            //sets up hand for selection
             var1 = this.p.hand.group.iterator();
             while(var1.hasNext()) {
                 c = (AbstractCard)var1.next();
@@ -92,27 +93,30 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                 }
             }
 
+            //if no cards can be upgraded, terminate process
             if (this.cannotUpgrade.size() == this.p.hand.group.size()) {
                 this.isDone = true;
                 return;
             }
 
-            if (!this.anyNumber && this.p.hand.size() - this.cannotUpgrade.size() <= this.amount) {
-                this.amount = this.p.hand.size();
-                numExhausted = this.amount;
-                i = this.p.hand.size();
+            if (this.p.hand.group.size() - this.cannotUpgrade.size() == 1) {
+                var1 = this.p.hand.group.iterator();
 
-                for(int j = 0; j < i; ++j) {
-                    c = this.p.hand.getTopCard();
-                    if (isAttack(c)) {
+                while(var1.hasNext()) {
+                    c = (AbstractCard)var1.next();
+
+                    if (c.canUpgrade() && isAttack(c)) {
+
                         c.upgrade();
-                        getMasterDeckEquivalent(c).upgrade();
-                        AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                        this.p.hand.moveToExhaustPile(c);
-                    }
-                }
+                        if(getMasterDeckEquivalent(c) != null) {
+                            getMasterDeckEquivalent(c).upgrade();
+                        }
+                        this.isDone = true;
+                        return;
 
-                return;
+                    }
+
+                }
             }
 
             this.p.hand.group.removeAll(this.cannotUpgrade);
@@ -128,7 +132,9 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                 c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
                 if (isAttack(c)) {
                     c.upgrade();
-                    getMasterDeckEquivalent(c).upgrade();
+                    if(getMasterDeckEquivalent(c) != null) {
+                        getMasterDeckEquivalent(c).upgrade();
+                    }
                     AbstractDungeon.player.bottledCardUpgradeCheck(c);
                     this.p.hand.moveToExhaustPile(c);
                 }
@@ -142,7 +148,9 @@ public class UpgradeExhaustAction extends AbstractGameAction {
             while(var1.hasNext()) {
                 c = (AbstractCard)var1.next();
                 c.upgrade();
-                getMasterDeckEquivalent(c).upgrade();
+                if(getMasterDeckEquivalent(c) != null) {
+                    getMasterDeckEquivalent(c).upgrade();
+                }
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
                 this.p.hand.moveToExhaustPile(c);
             }
@@ -151,25 +159,26 @@ public class UpgradeExhaustAction extends AbstractGameAction {
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
             this.isDone = true;
+            return;
         }
 
         this.tickDuration();
+    }
+
+    private void returnCards() {
+        Iterator var1 = this.cannotUpgrade.iterator();
+
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            this.p.hand.addToTop(c);
         }
 
-        private void returnCards() {
-            Iterator var1 = this.cannotUpgrade.iterator();
+        this.p.hand.refreshHandLayout();
+    }
 
-            while(var1.hasNext()) {
-                AbstractCard c = (AbstractCard)var1.next();
-                this.p.hand.addToTop(c);
-            }
-
-            this.p.hand.refreshHandLayout();
-        }
-
-        private boolean isAttack(AbstractCard card) {
-            return card.type.equals(AbstractCard.CardType.ATTACK);
-        }
+    private boolean isAttack(AbstractCard card) {
+        return card.type.equals(AbstractCard.CardType.ATTACK);
+    }
 
 
     static {
@@ -178,4 +187,3 @@ public class UpgradeExhaustAction extends AbstractGameAction {
     }
 
 }
-

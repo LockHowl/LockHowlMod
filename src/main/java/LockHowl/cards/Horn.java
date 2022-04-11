@@ -37,7 +37,7 @@ public class Horn extends AbstractDynamicCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ModifyMagicNumberAction(this.uuid, 1));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ModifyMagicNumberAction(this.uuid, 1));
     }
 }

@@ -60,6 +60,10 @@
   },
   "LockHowl:Shape": {
     "NAME": "Lethal Shape",
-    "DESCRIPTION": "Permanently upgrade a card in your hand and exhaust it. Exhaust."
+    "DESCRIPTION": "Permanently upgrade an attack in your hand and exhaust it. Exhaust."
+  },
+  "LockHowl:Bulwark": {
+    "NAME": "Bulwark",
+    "DESCRIPTION": "Gain !B! Block and !M! Plated Armor."
   }
 }

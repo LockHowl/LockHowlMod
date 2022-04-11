@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import static com.evacipated.cardcrawl.mod.stslib.StSLib.getMasterDeckEquivalent;
@@ -21,6 +23,7 @@ public class UpgradeExhaustAction extends AbstractGameAction {
     private boolean anyNumber;
     private boolean canPickZero;
     public static int numExhausted;
+    private ArrayList<AbstractCard> cannotUpgrade = new ArrayList();
 
     public UpgradeExhaustAction(int amount, boolean isRandom, boolean anyNumber, boolean canPickZero) {
         this.anyNumber = anyNumber;
@@ -69,6 +72,10 @@ public class UpgradeExhaustAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        Iterator var1;
+        AbstractCard c;
+        int i;
+
         if (this.duration == this.startDuration) {
             //Zero Hand-size Case
             if (this.p.hand.size() == 0) {
@@ -76,22 +83,38 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                 return;
             }
 
-            int i;
-            if (!this.anyNumber && this.p.hand.size() <= this.amount) {
+            var1 = this.p.hand.group.iterator();
+            while(var1.hasNext()) {
+                c = (AbstractCard)var1.next();
+                if (!this.isAttack(c) || c.upgraded == true) {
+                    this.cannotUpgrade.add(c);
+                }
+            }
+
+            if (this.cannotUpgrade.size() == this.p.hand.group.size()) {
+                this.isDone = true;
+                return;
+            }
+
+            if (!this.anyNumber && this.p.hand.size() - this.cannotUpgrade.size() <= this.amount) {
                 this.amount = this.p.hand.size();
                 numExhausted = this.amount;
                 i = this.p.hand.size();
 
                 for(int j = 0; j < i; ++i) {
-                    AbstractCard c = this.p.hand.getTopCard();
-                    c.upgrade();
-                    getMasterDeckEquivalent(c).upgrade();
-                    AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                    this.p.hand.moveToExhaustPile(c);
+                    c = this.p.hand.getTopCard();
+                    if (isAttack(c)) {
+                        c.upgrade();
+                        getMasterDeckEquivalent(c).upgrade();
+                        AbstractDungeon.player.bottledCardUpgradeCheck(c);
+                        this.p.hand.moveToExhaustPile(c);
+                    }
                 }
 
                 return;
             }
+
+            this.p.hand.group.removeAll(this.cannotUpgrade);
 
             if (!this.isRandom) {
                 numExhausted = this.amount;
@@ -101,11 +124,13 @@ public class UpgradeExhaustAction extends AbstractGameAction {
             }
 
             for(i = 0; i < this.amount; ++i) {
-                AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                c.upgrade();
-                getMasterDeckEquivalent(c).upgrade();
-                AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                this.p.hand.moveToExhaustPile(c);
+                c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                if (isAttack(c)) {
+                    c.upgrade();
+                    getMasterDeckEquivalent(c).upgrade();
+                    AbstractDungeon.player.bottledCardUpgradeCheck(c);
+                    this.p.hand.moveToExhaustPile(c);
+                }
             }
 
         }
@@ -114,11 +139,13 @@ public class UpgradeExhaustAction extends AbstractGameAction {
             Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
 
             while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
-                c.upgrade();
-                getMasterDeckEquivalent(c).upgrade();
-                AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                this.p.hand.moveToExhaustPile(c);
+                c = (AbstractCard)var4.next();
+                if (isAttack(c)){
+                    c.upgrade();
+                    getMasterDeckEquivalent(c).upgrade();
+                    AbstractDungeon.player.bottledCardUpgradeCheck(c);
+                    this.p.hand.moveToExhaustPile(c);
+                }
             }
 
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
@@ -126,6 +153,22 @@ public class UpgradeExhaustAction extends AbstractGameAction {
 
         this.tickDuration();
         }
+
+        private void returnCards() {
+            Iterator var1 = this.cannotUpgrade.iterator();
+
+            while(var1.hasNext()) {
+                AbstractCard c = (AbstractCard)var1.next();
+                this.p.hand.addToTop(c);
+            }
+
+            this.p.hand.refreshHandLayout();
+        }
+
+        private boolean isAttack(AbstractCard card) {
+            return card.type.equals(AbstractCard.CardType.ATTACK);
+        }
+
 
     static {
         uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");

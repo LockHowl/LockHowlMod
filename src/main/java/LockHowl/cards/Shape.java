@@ -9,16 +9,16 @@ import static LockHowl.DefaultMod.makeCardPath;
 
 public class Shape extends AbstractDynamicCard {
 
-    /*
+    /* Rare, Cost 2 (1), Skill
      * Shape: Permanently Upgrade an Attack and exhaust it. Exhaust.
      */
 
     public static final String ID = "LockHowl:Shape";
     public static final String IMG = makeCardPath("HammerSmash.png");
     private static final CardRarity RARITY = CardRarity.RARE;
-    //TARGET
     private static final CardType TYPE = CardType.SKILL;
     private static final int COST = 2;
+
 
     public Shape() {
         super(ID, IMG, COST, TYPE, AbstractCard.CardColor.RED, RARITY, CardTarget.NONE);

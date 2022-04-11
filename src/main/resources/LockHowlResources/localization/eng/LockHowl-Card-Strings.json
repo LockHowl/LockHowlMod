@@ -65,5 +65,9 @@
   "LockHowl:Bulwark": {
     "NAME": "Bulwark",
     "DESCRIPTION": "Gain !B! Block and !M! Plated Armor."
+  },
+  "LockHowl:Horn": {
+    "NAME": "Inspiring Horn",
+    "DESCRIPTION": "Gain !M! Strength. Increase the Strength of this card by 1 this combat."
   }
 }

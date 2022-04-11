@@ -1,6 +1,7 @@
 package LockHowl.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -101,7 +102,7 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                 numExhausted = this.amount;
                 i = this.p.hand.size();
 
-                for(int j = 0; j < i; ++i) {
+                for(int j = 0; j < i; ++j) {
                     c = this.p.hand.getTopCard();
                     if (isAttack(c)) {
                         c.upgrade();
@@ -136,19 +137,20 @@ public class UpgradeExhaustAction extends AbstractGameAction {
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
+            var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
 
-            while(var4.hasNext()) {
-                c = (AbstractCard)var4.next();
-                if (isAttack(c)){
-                    c.upgrade();
-                    getMasterDeckEquivalent(c).upgrade();
-                    AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                    this.p.hand.moveToExhaustPile(c);
-                }
+            while(var1.hasNext()) {
+                c = (AbstractCard)var1.next();
+                c.upgrade();
+                getMasterDeckEquivalent(c).upgrade();
+                AbstractDungeon.player.bottledCardUpgradeCheck(c);
+                this.p.hand.moveToExhaustPile(c);
             }
 
+            this.returnCards();
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
+            this.isDone = true;
         }
 
         this.tickDuration();

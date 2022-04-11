@@ -4,16 +4,18 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-
 import java.util.Iterator;
+
+import static com.evacipated.cardcrawl.mod.stslib.StSLib.getMasterDeckEquivalent;
 
 public class UpgradeExhaustAction extends AbstractGameAction {
 
-    private static final UIStrings uiStrings = null;
-    public static final String[] TEXT = new String[0];
+    private static final UIStrings uiStrings;
+    public static final String[] TEXT;
     private AbstractPlayer p;
     private boolean isRandom;
     private boolean anyNumber;
@@ -83,6 +85,7 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                 for(int j = 0; j < i; ++i) {
                     AbstractCard c = this.p.hand.getTopCard();
                     c.upgrade();
+                    getMasterDeckEquivalent(c).upgrade();
                     AbstractDungeon.player.bottledCardUpgradeCheck(c);
                     this.p.hand.moveToExhaustPile(c);
                 }
@@ -100,6 +103,7 @@ public class UpgradeExhaustAction extends AbstractGameAction {
             for(i = 0; i < this.amount; ++i) {
                 AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
                 c.upgrade();
+                getMasterDeckEquivalent(c).upgrade();
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
                 this.p.hand.moveToExhaustPile(c);
             }
@@ -112,6 +116,7 @@ public class UpgradeExhaustAction extends AbstractGameAction {
             while(var4.hasNext()) {
                 AbstractCard c = (AbstractCard)var4.next();
                 c.upgrade();
+                getMasterDeckEquivalent(c).upgrade();
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
                 this.p.hand.moveToExhaustPile(c);
             }
@@ -121,5 +126,11 @@ public class UpgradeExhaustAction extends AbstractGameAction {
 
         this.tickDuration();
         }
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+        TEXT = uiStrings.TEXT;
     }
+
+}
 

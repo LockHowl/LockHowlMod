@@ -11,8 +11,12 @@ import static LockHowl.DefaultMod.makeCardPath;
 
 public class Horn extends AbstractDynamicCard{
 
+    /* Uncommon, Cost 1, Skill
+     * Horn: Gain 1 (2) STR. This card's STR increases by 1 this combat.
+     */
+
     public static final String ID = "LockHowl:Horn";
-    public static final String IMG = makeCardPath("Horn.png");
+    public static final String IMG = makeCardPath("cHorn.png");
     private static final int COST = 1;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
     private static final AbstractCard.CardColor COLOR = AbstractCard.CardColor.RED;

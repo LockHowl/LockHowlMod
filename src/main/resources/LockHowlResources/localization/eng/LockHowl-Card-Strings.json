@@ -69,5 +69,9 @@
   "LockHowl:Horn": {
     "NAME": "Inspiring Horn",
     "DESCRIPTION": "Gain !M! Strength. Increase the Strength of this card by 1 this combat."
+  },
+  "LockHowl:Replenish": {
+    "NAME": "Replenish Blood",
+    "DESCRIPTION": "Deal !D! damage and heal !M! for each time you lost health this turn. ( !LockHowl:SecondMagic! times )"
   }
 }

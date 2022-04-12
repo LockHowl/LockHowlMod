@@ -115,7 +115,6 @@ public class UpgradeExhaustAction extends AbstractGameAction {
                         return;
 
                     }
-
                 }
             }
 

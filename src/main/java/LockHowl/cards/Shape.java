@@ -14,7 +14,7 @@ public class Shape extends AbstractDynamicCard {
      */
 
     public static final String ID = "LockHowl:Shape";
-    public static final String IMG = makeCardPath("HammerSmash.png");
+    public static final String IMG = makeCardPath("cHammerSmash.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardType TYPE = CardType.SKILL;
     private static final int COST = 2;

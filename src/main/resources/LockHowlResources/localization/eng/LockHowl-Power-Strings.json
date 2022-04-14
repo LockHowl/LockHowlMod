@@ -6,5 +6,9 @@
 "LockHowl:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"LockHowl:AddShivNextTurn": {
+        "NAME": "Opportune Blades",
+        "DESCRIPTIONS": ["At the start of your turn, add ", " Shiv to your hand.", " Shivs to your hand."]
 }
 }

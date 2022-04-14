@@ -73,5 +73,13 @@
   "LockHowl:Replenish": {
     "NAME": "Replenish Blood",
     "DESCRIPTION": "Deal !D! damage and heal !M! for each time you lost health this turn. ( !LockHowl:SecondMagic! times )"
+  },
+  "LockHowl:Nurture": {
+    "NAME": "Nurture",
+    "DESCRIPTION": "Discard 1 card. Next turn, gain [E] and draw !LockHowl:SecondMagic! cards."
+  },
+  "LockHowl:Opportunity": {
+    "NAME": "Opportunity",
+    "DESCRIPTION": "{@@}Gain !B! Block. Next turn, add !M! Shiv{!M!|>1=s} to your hand."
   }
 }

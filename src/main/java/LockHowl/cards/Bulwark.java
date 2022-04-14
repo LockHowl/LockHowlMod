@@ -11,6 +11,10 @@ import static LockHowl.DefaultMod.makeCardPath;
 
 public class Bulwark extends AbstractDynamicCard {
 
+    /* Uncommon, Cost 1, Skill
+     * Bulwark: Gain 7(9) Block and 1(2) Plated Armour.
+     */
+
     public static final String ID = "LockHowl:Bulwark";
     public static final String IMG = makeCardPath("EpicBlock.png");
     private static final int COST = 1;

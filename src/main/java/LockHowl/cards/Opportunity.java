@@ -1,13 +1,17 @@
 package LockHowl.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AddCardToHandNextTurnPower;
+import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
@@ -47,6 +51,7 @@ public class Opportunity extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new VFXAction(new SmokeBombEffect(p.hb.cX, p.hb.cY)));
         addToBot(new GainBlockAction(p, p, this.block));
         addToBot(new ApplyPowerAction(p, p, new AddCardToHandNextTurnPower(p, this.cardsToPreview, this.magicNumber), this.magicNumber));
     }

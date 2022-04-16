@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "LockHowl:LeakingBattery": {
+    "NAME": "Leaking Battery",
+    "FLAVOR": "This power-cell can't be used for any more energy but...",
+    "DESCRIPTIONS": [
+      "At the start of each combat, Channel 1 Acid orb."
+    ]
   }
 }

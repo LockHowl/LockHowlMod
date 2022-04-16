@@ -8,5 +8,15 @@
       " NL #yEvoke: Deal #b",
       " damage to all enemies."
     ]
+  },
+  "LockHowl:Acid": {
+    "NAME": "Acid",
+    "DESCRIPTION": [
+      "#yPassive: At the end of your turn, add #b",
+      " Poison.",
+      " Poison.",
+      " NL #yEvoke: Apply #b",
+      " poison to the enemy with highest health."
+    ]
   }
 }

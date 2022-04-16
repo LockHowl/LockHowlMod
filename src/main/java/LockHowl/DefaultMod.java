@@ -1,5 +1,6 @@
 package LockHowl;
 
+import LockHowl.relics.*;
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
@@ -24,10 +25,6 @@ import LockHowl.cards.*;
 import LockHowl.characters.TheDefault;
 import LockHowl.events.IdentityCrisisEvent;
 import LockHowl.potions.PlaceholderPotion;
-import LockHowl.relics.BottledPlaceholderRelic;
-import LockHowl.relics.DefaultClickableRelic;
-import LockHowl.relics.PlaceholderRelic;
-import LockHowl.relics.PlaceholderRelic2;
 import LockHowl.util.IDCheckDontTouchPls;
 import LockHowl.util.TextureLoader;
 import LockHowl.variables.DefaultCustomVariable;
@@ -395,7 +392,9 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
-        
+
+        BaseMod.addRelic(new LeakingBattery(), RelicType.BLUE);
+
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         

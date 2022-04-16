@@ -1,5 +1,6 @@
 package LockHowl.cards;
 
+import LockHowl.orbs.Acid;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -53,7 +54,7 @@ public class OrbSkill extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new DefaultOrb())); // Channel a Default Orb.
+        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new Acid())); // Channel a Default Orb.
 
     }
 

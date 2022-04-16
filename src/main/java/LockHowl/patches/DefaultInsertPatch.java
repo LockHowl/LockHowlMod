@@ -1,12 +1,24 @@
 package LockHowl.patches;
 
+import LockHowl.cards.Corrosive;
+import LockHowl.orbs.Acid;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.actions.defect.GashAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Claw;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.Dark;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /*
  * Using SpirePatch, also known as patching, allows you to insert your own code into the basegame code.
@@ -69,7 +81,41 @@ import org.apache.logging.log4j.Logger;
         */
 )
 public class DefaultInsertPatch {// Don't worry about the "never used" warning - *You* usually don't use/call them anywhere. Mod The Spire does.
-    
+
+    @SpirePatch(clz= GashAction.class, method="update")
+    public static class GashFixOnCorrosive
+    {
+        @SpirePrefixPatch
+        public static void GashFixOnCorrosive(GashAction __instance) {
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+                if (c instanceof Corrosive){
+                    c.baseDamage += __instance.amount;
+                    c.applyPowers();
+                }
+            }
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                if (c instanceof Corrosive){
+                    c.baseDamage += __instance.amount;
+                    c.applyPowers();
+                }
+            }
+            for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+                if (c instanceof Corrosive){
+                    c.baseDamage += __instance.amount;
+                    c.applyPowers();
+                }
+            }
+
+        }
+
+        @SpirePatch(clz= AbstractOrb.class, method="getRandomOrb")
+        public static class AddAcidToRandom {
+            @SpireInsertPatch(rloc=2, localvars={"orbs"})
+            public static void AddAcidToRandom(ArrayList<AbstractOrb> orbs) {
+                orbs.add(new Acid());// 53
+            }
+        }
+    }
     // You can have as many inner classes with patches as you want inside this one - you don't have to separate each patch into it's own file.
     // So if you need to put 4 patches all for 1 purpose (for example they all make a specific relic effect happen) - you can keep them organized together.
     // Do keep in mind that "A patch class must be a public static class."

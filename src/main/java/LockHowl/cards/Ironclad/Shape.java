@@ -1,6 +1,7 @@
-package LockHowl.cards;
+package LockHowl.cards.Ironclad;
 
 import LockHowl.actions.UpgradeExhaustAction;
+import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

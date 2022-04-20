@@ -1,6 +1,7 @@
-package LockHowl.cards;
+package LockHowl.cards.Ironclad;
 
 import LockHowl.actions.ModifyMagicNumberAction;
+import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +10,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
-public class Horn extends AbstractDynamicCard{
+public class Horn extends AbstractDynamicCard {
 
     /* Uncommon, Cost 1, Skill
      * Horn: Gain 1 (2) STR. This card's STR increases by 1 this combat.

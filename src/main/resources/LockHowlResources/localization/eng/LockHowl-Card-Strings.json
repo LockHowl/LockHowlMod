@@ -76,7 +76,7 @@
   },
   "LockHowl:Nurture": {
     "NAME": "Nurture",
-    "DESCRIPTION": "Discard 1 card. NL Next turn, gain [E] and draw !LockHowl:SecondMagic! cards."
+    "DESCRIPTION": "{@@}Discard 1 card. NL Next turn, gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]} and draw !LockHowl:SecondMagic! cards."
   },
   "LockHowl:Opportunity": {
     "NAME": "Opportunity",
@@ -97,6 +97,52 @@
   "LockHowl:Malfunction": {
     "NAME": "Malfunction",
     "DESCRIPTION": "Evoke ALL of your Orbs. Channel 1 Acid for each Orb Evoked."
+  },
+  "LockHowl:Hesitation": {
+    "NAME": "Hesitation",
+    "DESCRIPTION": "Burden. NL Deal !D! damage to ALL enemies."
+  },
+  "LockHowl:Indecision": {
+    "NAME": "Indecision",
+    "DESCRIPTION": "Burden. NL Draw !M! cards."
+  },
+  "LockHowl:Inhibition": {
+    "NAME": "Inhibition",
+    "DESCRIPTION": "{@@}Burden. NL Gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]}"
+  },
+  "LockHowl:Insecurity": {
+    "NAME": "Insecurity",
+    "DESCRIPTION": "Burden. Gain !B! Block."
+  },
+  "LockHowl:Palm": {
+    "NAME": "Palm Deflection",
+    "DESCRIPTION": "Apply !M! Mark to each enemy. NL Gain !M! Block for each enemy."
+  },
+  "LockHowl:Delve": {
+    "NAME": "Delve Destiny",
+    "DESCRIPTION": "Retain. NL Scry !M!. Whenever this card is Retained, increase Scry by 1 until played."
+  },
+  "LockHowl:Explosive": {
+    "NAME": "Plant Explosives",
+    "DESCRIPTION": "Apply !M! Rigged. Add a Detonator to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Rigged. Add a Detonator to your draw pile."
+  },
+  "LockHowl:Detonator": {
+    "NAME": "Detonate",
+    "DESCRIPTION": "Deal ALL enemies damage equal to their Rigged. NL Exhaust."
+  },
+  "LockHowl:Psycho": {
+    "NAME": "Demonic Voices",
+    "DESCRIPTION": "Gain !M! Inner Demons. Add a Release to your discard pile."
+  },
+  "LockHowl:Release": {
+    "NAME": "Release",
+    "DESCRIPTION": "Deal damage equal to your Inner Demons to a random enemy."
+  },
+  "LockHowl:Flash": {
+    "NAME": "Flashbang",
+    "DESCRIPTION": "If a non-boss, non-elite enemy intends to attack, apply 1 Stun to it.",
+    "EXTENDED_DESCRIPTION": ["The target is a boss.", "The target is an elite.", "The target does not intend to attack."]
   }
 
 }

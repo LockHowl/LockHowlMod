@@ -1,5 +1,6 @@
-package LockHowl.cards;
+package LockHowl.cards.Ironclad;
 
+import LockHowl.cards.AbstractDynamicCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
-public class Replenish extends AbstractDynamicCard{
+public class Replenish extends AbstractDynamicCard {
 
     /* Uncommon, Cost 1, Attack
      * Replenish: Deal 8 damage X times where X is times you lost health this turn. (X times).
@@ -50,9 +51,11 @@ public class Replenish extends AbstractDynamicCard{
 
     @Override
     public void upgrade() {
-        this.upgradeName();
-        this.upgradeDamage(UPGRADE_DAMAGE);
-        this.upgradeMagicNumber(UPGRADE_HEALING);
+        if (!this.upgraded) {
+            this.upgradeName();
+            this.upgradeDamage(UPGRADE_DAMAGE);
+            this.upgradeMagicNumber(UPGRADE_HEALING);
+        }
     }
 
     @Override

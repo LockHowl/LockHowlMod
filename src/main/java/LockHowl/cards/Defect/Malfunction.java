@@ -1,5 +1,6 @@
-package LockHowl.cards;
+package LockHowl.cards.Defect;
 
+import LockHowl.cards.AbstractDynamicCard;
 import LockHowl.orbs.Acid;
 import com.megacrit.cardcrawl.actions.defect.AnimateOrbAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
@@ -10,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
-public class Malfunction extends AbstractDynamicCard{
+public class Malfunction extends AbstractDynamicCard {
 
     /* Uncommon, Cost 2, Skill
      * Malfunction: Evoke all Orbs. Channel 1 Acid for each.

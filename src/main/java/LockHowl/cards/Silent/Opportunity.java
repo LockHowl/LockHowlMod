@@ -1,5 +1,6 @@
-package LockHowl.cards;
+package LockHowl.cards.Silent;
 
+import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -37,7 +38,7 @@ public class Opportunity extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = this.block = BLOCK;
         this.baseMagicNumber = this.magicNumber = CARDS;
-        this.cardsToPreview = new Shiv();
+        this.cardsToPreview = new Shiv(); //upgraded
     }
 
     @Override

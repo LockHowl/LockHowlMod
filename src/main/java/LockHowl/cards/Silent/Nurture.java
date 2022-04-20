@@ -1,5 +1,6 @@
-package LockHowl.cards;
+package LockHowl.cards.Silent;
 
+import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,7 +40,6 @@ public class Nurture extends AbstractDynamicCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(UPGRADE_ENERGY);
-            this.rawDescription = "Discard 1 card. Next turn, gain [E][E] and draw !LockHowl:SecondMagic! cards.";
         }
     }
 

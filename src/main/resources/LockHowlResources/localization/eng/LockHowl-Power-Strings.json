@@ -10,5 +10,13 @@
 "LockHowl:AddShivNextTurn": {
         "NAME": "Opportune Blades",
         "DESCRIPTIONS": ["At the start of your turn, add ", " Shiv to your hand.", " Shivs to your hand."]
+},
+"LockHowl:Rigged": {
+        "NAME": "Rigged",
+        "DESCRIPTIONS": [" damage worth explosives are strapped here."]
+},
+"LockHowl:Demons": {
+        "NAME": "Inner Demons",
+        "DESCRIPTIONS": [" voices in your head."]
 }
 }

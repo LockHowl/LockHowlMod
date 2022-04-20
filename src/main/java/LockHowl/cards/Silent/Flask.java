@@ -1,5 +1,6 @@
-package LockHowl.cards;
+package LockHowl.cards.Silent;
 
+import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -10,7 +11,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
-public class Flask extends AbstractDynamicCard{
+public class Flask extends AbstractDynamicCard {
 
     public static final String ID = "LockHowl:Flask";
     public static final String IMG = makeCardPath("cFlask.png");

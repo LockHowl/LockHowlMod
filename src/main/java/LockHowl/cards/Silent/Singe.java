@@ -1,13 +1,11 @@
-package LockHowl.cards;
+package LockHowl.cards.Silent;
 
+import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
@@ -18,7 +16,7 @@ import static LockHowl.DefaultMod.makeCardPath;
 public class Singe extends AbstractDynamicCard {
 
     /*
-     * Singe: Apply 4 (7) Poison. Deal damage equal to poison.
+     * Singe: Apply 3 (5) Poison. Deal damage equal to poison.
      */
 
     public static final String ID = "LockHowl:Singe";
@@ -28,8 +26,8 @@ public class Singe extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final int COST = 1;
 
-    private static final int POISON = 4;
-    private static final int UPGRADE_PLUS_POISON = 3;
+    private static final int POISON = 3;
+    private static final int UPGRADE_PLUS_POISON = 2;
 
     public Singe() {
         super(ID, IMG, COST, TYPE, AbstractCard.CardColor.GREEN, RARITY, TARGET);

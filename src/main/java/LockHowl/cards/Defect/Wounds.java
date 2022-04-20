@@ -1,16 +1,16 @@
-package LockHowl.cards;
+package LockHowl.cards.Defect;
 
+import LockHowl.cards.AbstractDynamicCard;
 import LockHowl.orbs.Acid;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
-public class Wounds extends AbstractDynamicCard{
+public class Wounds extends AbstractDynamicCard {
 
     /* Common, Cost 0, Skill
      * Open Wounds: Lose 4 (2) health. Channel 1 Acid.

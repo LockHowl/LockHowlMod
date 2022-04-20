@@ -1,5 +1,7 @@
 package LockHowl.cards;
 
+import LockHowl.cards.Interfaces.WhenScriedUse;
+import LockHowl.patches.CustomCardTags;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -23,7 +25,7 @@ import static LockHowl.DefaultMod.makeCardPath;
 // Abstract Dynamic Card builds up on Abstract Default Card even more and makes it so that you don't need to add
 // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
 // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately to showcase custom cards/inheritance a bit more.
-public class DefaultCommonAttack extends CustomCard {
+public class DefaultCommonAttack extends CustomCard implements WhenScriedUse {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -57,7 +59,7 @@ public class DefaultCommonAttack extends CustomCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = -2;
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
 
@@ -81,7 +83,7 @@ public class DefaultCommonAttack extends CustomCard {
 
     public DefaultCommonAttack() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
+        this.
         // Aside from baseDamage/MagicNumber/Block there's also a few more.
         // Just type this.base and let intelliJ auto complete for you, or, go read up AbstractCard
 
@@ -108,6 +110,10 @@ public class DefaultCommonAttack extends CustomCard {
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL)); // The animation the damage action uses to hit.
     }
 
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
+
     // Upgraded stats.
     @Override
     public void upgrade() {
@@ -116,5 +122,11 @@ public class DefaultCommonAttack extends CustomCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
+    }
+
+
+    @Override
+    public void whenScried(AbstractPlayer p) {
+        addToBot(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 }

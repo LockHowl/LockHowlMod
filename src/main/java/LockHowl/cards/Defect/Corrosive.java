@@ -1,5 +1,6 @@
-package LockHowl.cards;
+package LockHowl.cards.Defect;
 
+import LockHowl.cards.AbstractDynamicCard;
 import LockHowl.orbs.Acid;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -17,7 +18,7 @@ import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
 import static LockHowl.DefaultMod.makeCardPath;
 
-public class Corrosive extends AbstractDynamicCard{
+public class Corrosive extends AbstractDynamicCard {
 
     /* Uncommon, Cost 1, Attack
      * Corrosive Claw: Deal 3 damage. Channel 1 Acid.

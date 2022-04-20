@@ -25,7 +25,7 @@ public class AddCardToHandNextTurnPower extends AbstractPower {
 
     public AddCardToHandNextTurnPower(AbstractCreature owner, AbstractCard card, int amount) {
         this.name = NAME;
-        this.ID = "Add Shiv";
+        this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         this.card = card;

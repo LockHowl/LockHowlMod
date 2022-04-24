@@ -141,8 +141,119 @@
   },
   "LockHowl:Flash": {
     "NAME": "Flashbang",
-    "DESCRIPTION": "If a non-boss, non-elite enemy intends to attack, apply 1 Stun to it.",
+    "DESCRIPTION": "If a non-boss, non-elite enemy intends to attack, apply 1 Stun to it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If a non-boss, non-elite enemy intends to attack, apply 1 Stun to it.",
     "EXTENDED_DESCRIPTION": ["The target is a boss.", "The target is an elite.", "The target does not intend to attack."]
+  },
+  "LockHowl:Sabotage": {
+    "NAME": "Sabotage",
+    "DESCRIPTION": "Apply !M! Slow.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Apply !M! Slow."
+  },
+  "LockHowl:Volatile": {
+    "NAME": "Volatility",
+    "DESCRIPTION": "Gain 1 Volatile Weapons.",
+    "UPGRADE_DESCRIPTION": "Innate. Gain 1 Volatile Weapons."
+  },
+  "LockHowl:Enraged": {
+    "NAME": "Enraged Onslaught",
+    "DESCRIPTION": "Gain 1 Enraged.",
+    "UPGRADE_DESCRIPTION": "Innate. Gain 1 Enraged."
+  },
+  "LockHowl:Skin": {
+    "NAME": "Adaptation",
+    "DESCRIPTION": "Gain 1 Adaptation.",
+    "UPGRADE_DESCRIPTION": "Innate. Gain 1 Adaptation."
+  },
+  "LockHowl:Steel":{
+    "NAME": "Through Steel",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has armor, attack 2 times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has armor, attack 3 times."
+  },
+  "LockHowl:Magnetic": {
+    "NAME": "Magnetic Weapons",
+    "DESCRIPTION": "Gain !M! Magnetic Weapons."
+  },
+  "LockHowl:Reversal": {
+    "NAME": "Reversal",
+    "DESCRIPTION": "If an enemy intends to attack, deal damage equal to its intent. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If an enemy intends to attack, deal damage equal to its intent 2 times. NL Exhaust."
+  },
+  "LockHowl:Cocoon": {
+    "NAME": "Cocoon",
+    "DESCRIPTION": "Remove ALL debuffs and gain 1 Dexterity for each type.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Remove ALL debuffs and gain 1 Dexterity for each type. NL Exhaust."
+  },
+  "LockHowl:Chaos": {
+    "NAME": "Chaos Theory",
+    "DESCRIPTION": "After !M! turns, gain 6 Strength. NL Exhaust."
+  },
+  "LockHowl:Time": {
+    "NAME": "Borrowed Time",
+    "DESCRIPTION": "{@@}Gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]}. NL Add a Void to your draw pile."
+  },
+  "LockHowl:Greed": {
+    "NAME": "Burial of Gold",
+    "DESCRIPTION": "Lose !M! Gold. Deal !D! to ALL enemies."
+  },
+  "LockHowl:Alchemy": {
+    "NAME": "Alchemist's Circle",
+    "DESCRIPTION": "Gain !M! Gold X times. NL Exhaust."
+  },
+  "LockHowl:Dissolution": {
+    "NAME": "Dissolution",
+    "DESCRIPTION": "Exhaust a card in your hand and gain a potion of the matching type. NL Exhaust."
+  },
+  "LockHowl:Blood": {
+    "NAME": "Blood Arts",
+    "DESCRIPTION": "Lose !M! HP. Your next attack deals double damage. NL Exhaust."
+  },
+  "LockHowl:Chain": {
+    "NAME": "Chain Hold",
+    "DESCRIPTION": "If enemy intends to attack, it loses !M! Strength next turn and you gain !M! Strength. NL Exhaust."
+  },
+  "LockHowl:Respite": {
+    "NAME": "Respite",
+    "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
+  },
+  "LockHowl:Innocence": {
+    "NAME": "Innocence",
+    "DESCRIPTION": "Remove ALL debuffs. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Remove ALL debuffs. NL Exhaust."
+  },
+  "LockHowl:Clarity": {
+    "NAME": "Clarity",
+    "DESCRIPTION": "Charge.",
+    "UPGRADE_DESCRIPTION": "Copy a card in your hand PERMANENTLY. NL Purge."
+  },
+  "LockHowl:Exhale": {
+    "NAME": "Exhale",
+    "DESCRIPTION": "Charge.",
+    "UPGRADE_DESCRIPTION": "Remove a card from your deck PERMANENTLY. NL Purge."
+  },
+  "LockHowl:Unfair": {
+    "NAME": "Unfair Game",
+    "DESCRIPTION": "Innate. NL Gain 1 Strength and 1 Dexterity. NL Exhaust."
+  },
+  "LockHowl:GodForm": {
+    "NAME": "God Form",
+    "DESCRIPTION": "Enter Divinity. NL Ethereal. Exhaust."
+  },
+  "LockHowl:GutPunch": {
+    "NAME": "Gut Punch",
+    "DESCRIPTION": "Deal !D! damage. If enemy intends to attack, it loses !M! Strength."
+  },
+  "LockHowl:Strategy": {
+    "NAME": "Calculated Strategy",
+    "DESCRIPTION": "Next turn, gain !B! block."
+  },
+  "LockHowl:Cravings": {
+    "NAME": "Cravings of Blood",
+    "DESCRIPTION": "Add !M! random Attacks to your hand. They cost 0 this turn. NL Exhaust."
+  },
+  "LockHowl:Ambush": {
+    "NAME": "Ambush",
+    "DESCRIPTION": "Innate. NL Deal !D! damage to ALL enemies. NL Exhaust."
   }
 
 }

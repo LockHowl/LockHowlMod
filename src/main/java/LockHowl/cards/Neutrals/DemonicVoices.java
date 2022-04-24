@@ -1,7 +1,6 @@
 package LockHowl.cards.Neutrals;
 
 import LockHowl.powers.DemonsPower;
-import LockHowl.powers.RiggedPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -11,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
-public class Psycho extends CustomCard {
+public class DemonicVoices extends CustomCard {
 
     public static final String ID = "Madness";
 
@@ -27,7 +26,7 @@ public class Psycho extends CustomCard {
     private static final int PSYCH = 8;
     private static final int PSYCH_UPGRADED = 3;
 
-    public Psycho() {
+    public DemonicVoices() {
         super(ID, NAME, new RegionName("colorless/skill/madness"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = PSYCH;
         this.cardsToPreview = new Release();

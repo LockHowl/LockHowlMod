@@ -22,5 +22,9 @@
       "Burden"
     ],
     "DESCRIPTION": "Can only be played by being discarded through a Scry effect."
+  },
+  {
+    "NAMES": ["Charge"],
+    "DESCRIPTION": "This card needs to be upgraded to unlock its effect."
   }
 ]

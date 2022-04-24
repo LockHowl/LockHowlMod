@@ -47,6 +47,7 @@ public class Opportunity extends AbstractDynamicCard {
             this.upgradeName();
             this.upgradeBlock(2);
             this.upgradeMagicNumber(1);
+            this.cardsToPreview.upgrade();
         }
     }
 

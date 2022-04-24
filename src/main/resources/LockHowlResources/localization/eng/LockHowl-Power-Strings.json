@@ -18,5 +18,21 @@
 "LockHowl:Demons": {
         "NAME": "Inner Demons",
         "DESCRIPTIONS": [" voices in your head."]
+},
+"LockHowl:Volatile": {
+        "NAME": "Volatile Weapons",
+        "DESCRIPTIONS": ["Apply ", " of a random debuff when dealing unblocked damage."]
+},
+"LockHowl:Enraged": {
+        "NAME": "Enraged",
+        "DESCRIPTIONS": ["Apply ", " of a random buff to yourself when dealing unblocked damage."]
+},
+"LockHowl:Skin": {
+        "NAME": "Adaptation",
+        "DESCRIPTIONS": ["Apply ", " of a random buff to yourself when gaining block."]
+},
+"LockHowl:Magnetic": {
+        "NAME": "Magnetic Weapon",
+        "DESCRIPTIONS": ["Gain ", " gold from dealing unblocked damage."]
 }
 }

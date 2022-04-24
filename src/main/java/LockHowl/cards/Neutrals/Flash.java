@@ -18,7 +18,7 @@ public class Flash extends CustomCard {
     public static final String NAME = languagePack.getCardStrings(_ID).NAME;
     public static final String DESC = languagePack.getCardStrings(_ID).DESCRIPTION;
     public static final String[] RESPONSE = languagePack.getCardStrings(_ID).EXTENDED_DESCRIPTION;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final AbstractCard.CardType TYPE = CardType.SKILL;
     private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
@@ -29,7 +29,7 @@ public class Flash extends CustomCard {
     public Flash() {
         super(ID, NAME, new RegionName("colorless/skill/blind"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = STUN;
-
+        this.exhaust = true;
     }
 
     @Override
@@ -55,7 +55,10 @@ public class Flash extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            this.rawDescription = languagePack.getCardStrings(_ID).UPGRADE_DESCRIPTION;
+            this.exhaust = false;
+            initializeDescription();
+
         }
     }
 

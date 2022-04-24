@@ -18,7 +18,7 @@ public class Detonator extends CustomCard {
     private static final int COST = 0;
     private static final AbstractCard.CardType TYPE = CardType.SKILL;
     private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.SPECIAL;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ALL;
 
 

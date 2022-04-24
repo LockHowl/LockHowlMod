@@ -18,11 +18,11 @@ public class Release extends CustomCard {
     private static final int COST = 0;
     private static final AbstractCard.CardType TYPE = CardType.ATTACK;
     private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.SPECIAL;
     private static final AbstractCard.CardTarget TARGET = CardTarget.NONE;
 
     public Release() {
-        super(ID, NAME, new RegionName("colorless/skill/mind_blast"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, new RegionName("colorless/attack/mind_blast"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
     }
 
     @Override

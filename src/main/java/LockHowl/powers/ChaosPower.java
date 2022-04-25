@@ -30,7 +30,7 @@ public class ChaosPower extends AbstractPower implements NonStackablePower {
     }
 
     public void updateDescription() {
-        this.description = this.amount + DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     public void atEndOfTurn() {
@@ -41,7 +41,7 @@ public class ChaosPower extends AbstractPower implements NonStackablePower {
     }
 
     static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("LockHowl:Rigged");
+        powerStrings = CardCrawlGame.languagePack.getPowerStrings("LockHowl:Chaos");
         NAME = powerStrings.NAME;
         DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     }

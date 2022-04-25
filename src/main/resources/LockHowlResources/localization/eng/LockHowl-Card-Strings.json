@@ -158,7 +158,7 @@
   "LockHowl:Enraged": {
     "NAME": "Enraged Onslaught",
     "DESCRIPTION": "Gain 1 Enraged.",
-    "UPGRADE_DESCRIPTION": "Innate. Gain 1 Enraged."
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Enraged."
   },
   "LockHowl:Skin": {
     "NAME": "Adaptation",
@@ -213,7 +213,7 @@
     "DESCRIPTION": "If enemy intends to attack, it loses !M! Strength next turn and you gain !M! Strength. NL Exhaust."
   },
   "LockHowl:Respite": {
-    "NAME": "Respite",
+    "NAME": "Moment of Respite",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust."
   },
   "LockHowl:Innocence": {

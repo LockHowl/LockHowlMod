@@ -1,14 +1,14 @@
 package LockHowl.powers;
 
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 
 public class MagneticPower extends AbstractPower {
 
@@ -22,8 +22,7 @@ public class MagneticPower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("LockHowlResources/images/powers/Knife84.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("LockHowlResources/images/powers/Knife32.png"), 0, 0, 32, 32);
+        this.loadRegion("magnet");
         this.updateDescription();
     }
 
@@ -35,6 +34,25 @@ public class MagneticPower extends AbstractPower {
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
             //Steal Gold VFX
+            AbstractCreature p = AbstractDungeon.player;
+/*
+            int num = this.amount;
+            AbstractCreature tar = target;
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    for (int i = 0; i < num; ++i) {
+                        AbstractDungeon.effectList.add(new GainPennyEffect(p, p.hb_x, p.hb_y, tar.hb_x, tar.hb_y, true));
+                    }
+                    isDone = true;
+                }
+            });
+*/
+
+
+            for (int i = 0; i < amount; i++) {
+                addToBot(new VFXAction(p, new GainPennyEffect(target.hb.cX, target.hb.cY), 0.2F));
+            }
             AbstractDungeon.player.gainGold(this.amount);
         }
     }

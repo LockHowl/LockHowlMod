@@ -34,5 +34,9 @@
 "LockHowl:Magnetic": {
         "NAME": "Magnetic Weapon",
         "DESCRIPTIONS": ["Gain ", " gold from dealing unblocked damage."]
+},
+"LockHowl:Chaos": {
+        "NAME": "Chaos",
+        "DESCRIPTIONS": ["Gain 6 Strength after ", " turns."]
 }
 }

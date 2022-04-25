@@ -36,8 +36,8 @@ public class Opportunity extends AbstractDynamicCard {
 
     public Opportunity() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = this.block = BLOCK;
-        this.baseMagicNumber = this.magicNumber = CARDS;
+        this.block = this.baseBlock = BLOCK;
+        this.magicNumber = this.baseMagicNumber = CARDS;
         this.cardsToPreview = new Shiv(); //upgraded
     }
 

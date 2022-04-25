@@ -26,7 +26,7 @@ public class MagneticWeapon extends CustomCard {
     private static final int UPGRADED_MAGNET = 1;
 
     public MagneticWeapon() {
-        super(ID, NAME, new RegionName("colorless/skill/magnetism"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, new RegionName("colorless/power/magnetism"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGNET;
     }
 

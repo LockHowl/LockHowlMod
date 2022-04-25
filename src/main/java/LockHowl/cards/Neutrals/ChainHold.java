@@ -23,7 +23,7 @@ public class ChainHold extends CustomCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int CHAIN = 3;
+    private static final int CHAIN = 2;
     private static final int UPGRADED_CHAIN = 1;
 
     public ChainHold() {
@@ -42,9 +42,9 @@ public class ChainHold extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
+        if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() > 0) {
             addToBot(new ApplyPowerAction(p, p, new GainStrengthPower(p, this.magicNumber)));
-            addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(m, this.magicNumber)));
+            addToBot(new ApplyPowerAction(m, p, new LoseStrengthPower(m, this.magicNumber)));
         }
     }
 

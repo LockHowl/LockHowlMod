@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
-public class Impatience extends CustomCard {
+public class BorrowedTime extends CustomCard {
 
     public static final String ID = "Impatience";
 
@@ -26,7 +26,7 @@ public class Impatience extends CustomCard {
     private static final int ENERGY = 2;
     private static final int UPGRADED_ENERGY = 1;
 
-    public Impatience() {
+    public BorrowedTime() {
         super(ID, NAME, new RegionName("colorless/skill/impatience"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = ENERGY;
         this.exhaust = true;

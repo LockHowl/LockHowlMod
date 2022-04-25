@@ -1,7 +1,9 @@
 package LockHowl.cards.Neutrals;
 
+import LockHowl.actions.AlchemistsCircleAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -40,10 +42,7 @@ public class AlchemistsCircle extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.energyOnUse < EnergyPanel.totalCount) {
-            this.energyOnUse = EnergyPanel.totalCount;
-        }
-        addToBot(new GainGoldAction(this.energyOnUse));
+        addToBot(new AlchemistsCircleAction(p, magicNumber, energyOnUse));
     }
 
 

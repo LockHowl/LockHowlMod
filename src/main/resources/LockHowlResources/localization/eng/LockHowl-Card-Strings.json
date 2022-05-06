@@ -88,7 +88,8 @@
   },
   "LockHowl:Wounds": {
     "NAME": "Open Wounds",
-    "DESCRIPTION": "Lose !M! HP. NL Channel 1 Acid."
+    "DESCRIPTION": "Lose !M! HP. NL Channel 1 Acid.",
+    "UPGRADE_DESCRIPTION": "Channel 1 Acid."
   },
   "LockHowl:Corrosive": {
     "NAME": "Corrosive Claw",
@@ -153,7 +154,7 @@
   "LockHowl:Volatile": {
     "NAME": "Volatility",
     "DESCRIPTION": "Gain 1 lockhowl:Volatile_Weapon. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Innate. Gain 1 lockhowl:Volatile_Weapon. NL Ethereal."
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 lockhowl:Volatile_Weapon. NL Ethereal."
   },
   "LockHowl:Enraged": {
     "NAME": "Enraged Onslaught",
@@ -172,11 +173,6 @@
   "LockHowl:Magnetic": {
     "NAME": "Magnetic Weapons",
     "DESCRIPTION": "Gain !M! lockhowl:Magnetic_Weapons."
-  },
-  "LockHowl:Reversal": {
-    "NAME": "Reversal",
-    "DESCRIPTION": "If an enemy intends to attack, deal damage equal to its intent. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "If an enemy intends to attack, deal damage equal to its intent 2 times. NL Exhaust."
   },
   "LockHowl:Cocoon": {
     "NAME": "Cocoon",

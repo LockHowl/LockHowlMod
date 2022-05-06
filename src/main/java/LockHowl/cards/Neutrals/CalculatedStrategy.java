@@ -23,7 +23,7 @@ public class CalculatedStrategy extends CustomCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;
 
     private static final int BLOCK = 12;
-    private static final int UPGRADED_BLOCK = 16;
+    private static final int UPGRADED_BLOCK = 4;
 
     public CalculatedStrategy() {
         super(ID, NAME, new RegionName("colorless/skill/thinking_ahead"), COST, DESC, TYPE, COLOR, RARITY, TARGET);

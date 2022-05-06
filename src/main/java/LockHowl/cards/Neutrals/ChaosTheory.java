@@ -16,7 +16,7 @@ public class ChaosTheory extends CustomCard {
     public static final String _ID = "LockHowl:Chaos";
     public static final String NAME = languagePack.getCardStrings(_ID).NAME;
     public static final String DESC = languagePack.getCardStrings(_ID).DESCRIPTION;
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final AbstractCard.CardType TYPE = CardType.SKILL;
     private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;

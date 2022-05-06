@@ -24,7 +24,7 @@ public class BloodArts extends CustomCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.NONE;
 
     private static final int HPLOSS = 6;
-    private static final int HPLOSS_UPGRADE = 2;
+    private static final int HPLOSS_UPGRADE = -2;
 
     public BloodArts() {
         super(ID, NAME, new CustomCard.RegionName("colorless/skill/violence"), COST, DESC, TYPE, COLOR, RARITY, TARGET);

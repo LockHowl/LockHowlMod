@@ -133,7 +133,7 @@
   },
   "LockHowl:Psycho": {
     "NAME": "Demonic Voices",
-    "DESCRIPTION": "Gain !M! lockhowl:Inner_Demons . Add a Release to your discard pile."
+    "DESCRIPTION": "Gain !M! lockhowl:Inner_Demons. Add a Release to your discard pile."
   },
   "LockHowl:Release": {
     "NAME": "Release",
@@ -171,7 +171,7 @@
   },
   "LockHowl:Magnetic": {
     "NAME": "Magnetic Weapons",
-    "DESCRIPTION": "Gain !M! lockhow:Magnetic_Weapons."
+    "DESCRIPTION": "Gain !M! lockhowl:Magnetic_Weapons."
   },
   "LockHowl:Reversal": {
     "NAME": "Reversal",
@@ -222,13 +222,13 @@
   },
   "LockHowl:Clarity": {
     "NAME": "Clarity",
-    "DESCRIPTION": "Charge.",
-    "UPGRADE_DESCRIPTION": "Copy a card in your hand PERMANENTLY. NL Purge."
+    "DESCRIPTION": "lockhowl:Charge.",
+    "UPGRADE_DESCRIPTION": "Copy a card in your hand PERMANENTLY. NL lockhowl:Purge."
   },
   "LockHowl:Exhale": {
     "NAME": "Exhale",
-    "DESCRIPTION": "Charge.",
-    "UPGRADE_DESCRIPTION": "Remove a card from your deck PERMANENTLY. NL Purge."
+    "DESCRIPTION": "lockhowl:Charge.",
+    "UPGRADE_DESCRIPTION": "Remove a card from your deck PERMANENTLY. NL lockhowl:Purge."
   },
   "LockHowl:Unfair": {
     "NAME": "Unfair Game",

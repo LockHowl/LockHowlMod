@@ -24,7 +24,7 @@ public class Wounds extends AbstractDynamicCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 
-    private static final int HEALTH_LOSS = 4;
+    private static final int HEALTH_LOSS = 2;
     private static final int UPGRADE_HEALTH_LOSS = -2;
 
     public Wounds() {
@@ -42,7 +42,10 @@ public class Wounds extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, this.magicNumber));
+        if(!this.upgraded){
+            addToBot(new LoseHPAction(p, p, this.magicNumber));
+        }
+
         addToBot(new ChannelAction(new Acid()));
     }
 }

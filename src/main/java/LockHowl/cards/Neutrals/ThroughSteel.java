@@ -3,6 +3,7 @@ package LockHowl.cards.Neutrals;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,6 +26,7 @@ public class ThroughSteel extends CustomCard {
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int DAMAGE = 9;
+    private static final int UPGRADED_DAMAGE = 3;
 
     public ThroughSteel() {
         super(ID, NAME, new CustomCard.RegionName("colorless/attack/flash_of_steel"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
@@ -35,19 +37,16 @@ public class ThroughSteel extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = languagePack.getCardStrings(_ID).UPGRADE_DESCRIPTION;
+            this.upgradeDamage(UPGRADED_DAMAGE);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         if (m.currentBlock > 0) {
-            addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            if(this.upgraded) {
-                addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            }
+            addToBot(new GainBlockAction(p, this.damage));
         }
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
     public void triggerOnGlowCheck() {

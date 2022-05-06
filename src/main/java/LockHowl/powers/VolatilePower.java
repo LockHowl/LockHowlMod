@@ -36,20 +36,18 @@ public class VolatilePower extends AbstractPower {
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
 
-            int RNG = AbstractDungeon.cardRandomRng.random(0, 5);
+            int RNG = AbstractDungeon.cardRandomRng.random(0, 4);
 
             switch (RNG) {
                 case 0: addToTop(new ApplyPowerAction(target, this.owner, new PoisonPower(target, this.owner, this.amount)));;
                     break;
-                case 1: addToTop(new ApplyPowerAction(target, this.owner, new SlowPower(target, this.amount)));
+                case 1: addToTop(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -this.amount)));
                     break;
-                case 2: addToTop(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -this.amount)));
+                case 2: addToTop(new ApplyPowerAction(target, this.owner, new VulnerablePower(target, this.amount, false)));
                     break;
-                case 3: addToTop(new ApplyPowerAction(target, this.owner, new VulnerablePower(target, this.amount, false)));
+                case 3: addToTop(new ApplyPowerAction(target, this.owner, new WeakPower(target, this.amount, false)));
                     break;
-                case 4: addToTop(new ApplyPowerAction(target, this.owner, new WeakPower(target, this.amount, false)));
-                    break;
-                case 5: addToTop(new ApplyPowerAction(target, this.owner, new ChokePower(target, this.amount)));
+                case 4: addToTop(new ApplyPowerAction(target, this.owner, new ChokePower(target, this.amount)));
                     break;
                 default: break;
             }

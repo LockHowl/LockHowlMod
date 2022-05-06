@@ -1,16 +1,12 @@
 package LockHowl.powers;
 
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 
 public class SkinPower extends AbstractPower {
 
@@ -35,7 +31,7 @@ public class SkinPower extends AbstractPower {
     public void onGainedBlock(float blockAmount) {
         if (blockAmount > 0.0F) {
             this.flash();
-            int RNG = AbstractDungeon.cardRandomRng.random(0, 5);
+            int RNG = AbstractDungeon.cardRandomRng.random(0, 4);
 
             switch (RNG) {
                 case 0: addToTop(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.amount)));
@@ -44,11 +40,9 @@ public class SkinPower extends AbstractPower {
                     break;
                 case 2: addToTop(new ApplyPowerAction(this.owner, this.owner, new DrawCardNextTurnPower(this.owner, this.amount)));
                     break;
-                case 3: addToTop(new ApplyPowerAction(this.owner, this.owner, new MetallicizePower(this.owner, this.amount)));
+                case 3: addToTop(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount)));
                     break;
-                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount)));
-                    break;
-                case 5: addToTop(new ApplyPowerAction(this.owner, this.owner, new RegenPower(this.owner, this.amount)));
+                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new MantraPower(this.owner, this.amount)));
                     break;
                 default: break;
             }

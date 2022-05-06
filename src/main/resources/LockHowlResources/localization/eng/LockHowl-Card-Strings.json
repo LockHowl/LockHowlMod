@@ -72,7 +72,7 @@
   },
   "LockHowl:Replenish": {
     "NAME": "Replenish Blood",
-    "DESCRIPTION": "Deal !D! damage and heal !M! for each time you lost health this turn. ( !LockHowl:SecondMagic! times )"
+    "DESCRIPTION": "Deal !D! damage and heal !M! HP. NL Repeat for each time you lost health this turn. NL ( !LockHowl:SecondMagic! times )"
   },
   "LockHowl:Nurture": {
     "NAME": "Nurture",
@@ -88,7 +88,7 @@
   },
   "LockHowl:Wounds": {
     "NAME": "Open Wounds",
-    "DESCRIPTION": "Lose !M! health. NL Channel 1 Acid."
+    "DESCRIPTION": "Lose !M! HP. NL Channel 1 Acid."
   },
   "LockHowl:Corrosive": {
     "NAME": "Corrosive Claw",
@@ -100,19 +100,19 @@
   },
   "LockHowl:Hesitation": {
     "NAME": "Hesitation",
-    "DESCRIPTION": "Burden. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "lockhowl:Burden. NL Deal !D! damage to ALL enemies."
   },
   "LockHowl:Indecision": {
     "NAME": "Indecision",
-    "DESCRIPTION": "Burden. NL Draw !M! cards."
+    "DESCRIPTION": "lockhowl:Burden. NL Draw !M! cards."
   },
   "LockHowl:Inhibition": {
     "NAME": "Inhibition",
-    "DESCRIPTION": "{@@}Burden. NL Gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]}"
+    "DESCRIPTION": "{@@} lockhowl:Burden. NL Gain {!M!|-1=[E][E]|1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]}."
   },
   "LockHowl:Insecurity": {
     "NAME": "Insecurity",
-    "DESCRIPTION": "Burden. Gain !B! Block."
+    "DESCRIPTION": "lockhowl:Burden. NL Gain !B! Block."
   },
   "LockHowl:Palm": {
     "NAME": "Palm Deflection",
@@ -124,20 +124,20 @@
   },
   "LockHowl:Explosive": {
     "NAME": "Plant Explosives",
-    "DESCRIPTION": "Apply !M! Rigged. Add a Detonator to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Rigged. Add a Detonator to your draw pile."
+    "DESCRIPTION": "Apply !M! lockhowl:Rigged. Add a Detonator to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Apply !M! lockhowl:Rigged. Add a Detonator to your draw pile."
   },
   "LockHowl:Detonator": {
     "NAME": "Detonate",
-    "DESCRIPTION": "Deal ALL enemies damage equal to their Rigged. NL Exhaust."
+    "DESCRIPTION": "Deal ALL enemies damage equal to their lockhowl:Rigged. NL Exhaust."
   },
   "LockHowl:Psycho": {
     "NAME": "Demonic Voices",
-    "DESCRIPTION": "Gain !M! Inner Demons. Add a Release to your discard pile."
+    "DESCRIPTION": "Gain !M! lockhowl:Inner_Demons . Add a Release to your discard pile."
   },
   "LockHowl:Release": {
     "NAME": "Release",
-    "DESCRIPTION": "Deal damage equal to your Inner Demons to a random enemy."
+    "DESCRIPTION": "Deal damage equal to your lockhowl:Inner_Demons to a random enemy."
   },
   "LockHowl:Flash": {
     "NAME": "Flashbang",
@@ -152,27 +152,26 @@
   },
   "LockHowl:Volatile": {
     "NAME": "Volatility",
-    "DESCRIPTION": "Gain 1 Volatile Weapons.",
-    "UPGRADE_DESCRIPTION": "Innate. Gain 1 Volatile Weapons."
+    "DESCRIPTION": "Gain 1 lockhowl:Volatile_Weapon. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Innate. Gain 1 lockhowl:Volatile_Weapon. NL Ethereal."
   },
   "LockHowl:Enraged": {
     "NAME": "Enraged Onslaught",
-    "DESCRIPTION": "Gain 1 Enraged.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Enraged."
+    "DESCRIPTION": "Gain 1 lockhowl:Enraged. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 lockhowl:Enraged. NL Ethereal."
   },
   "LockHowl:Skin": {
     "NAME": "Adaptation",
-    "DESCRIPTION": "Gain 1 Adaptation.",
-    "UPGRADE_DESCRIPTION": "Innate. Gain 1 Adaptation."
+    "DESCRIPTION": "Gain 1 lockhowl:Adaptation. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 lockhowl:Adaptation. NL Ethereal."
   },
-  "LockHowl:Steel":{
-    "NAME": "Through Steel",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has armor, attack 2 times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy has armor, attack 3 times."
+  "LockHowl:Steel": {
+    "NAME": "Silver Trail",
+    "DESCRIPTION": "If enemy has Block, gain !D! Block, affected by Strength. NL Deal !D! damage."
   },
   "LockHowl:Magnetic": {
     "NAME": "Magnetic Weapons",
-    "DESCRIPTION": "Gain !M! Magnetic Weapons."
+    "DESCRIPTION": "Gain !M! lockhow:Magnetic_Weapons."
   },
   "LockHowl:Reversal": {
     "NAME": "Reversal",
@@ -186,7 +185,7 @@
   },
   "LockHowl:Chaos": {
     "NAME": "Chaos Theory",
-    "DESCRIPTION": "After !M! turns, gain 6 Strength. NL Exhaust."
+    "DESCRIPTION": "After !M! turns, gain 7 Strength. NL Exhaust."
   },
   "LockHowl:Time": {
     "NAME": "Borrowed Time",
@@ -245,7 +244,7 @@
   },
   "LockHowl:Strategy": {
     "NAME": "Calculated Strategy",
-    "DESCRIPTION": "Next turn, gain !B! block."
+    "DESCRIPTION": "Next turn, gain !B! Block."
   },
   "LockHowl:Cravings": {
     "NAME": "Cravings of Blood",
@@ -254,6 +253,17 @@
   "LockHowl:Ambush": {
     "NAME": "Ambush",
     "DESCRIPTION": "Innate. NL Deal !D! damage to ALL enemies. NL Exhaust."
+  },
+  "LockHowl:Research": {
+    "NAME": "Research",
+    "DESCRIPTION": "Add !M! random Skills to your hand. They cost 0 this turn. NL Exhaust."
+  },
+  "LockHowl:Tapestry": {
+    "NAME": "Tapestry",
+    "DESCRIPTION": "Add !M! random Powers to your hand. They cost 0 this turn. NL Exhaust."
+  },
+  "LockHowl:MasterfulTactics": {
+    "NAME": "Masterful Tactics",
+    "DESCRIPTION": "Select !M! cards from your draw pile and place them on the top. NL Exhaust."
   }
-
 }

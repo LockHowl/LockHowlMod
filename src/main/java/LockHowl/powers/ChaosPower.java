@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class ChaosPower extends AbstractPower implements NonStackablePower {
-    public static final String POWER_ID = "Chaos";
+    public static final String POWER_ID = "ChaosPower";
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
@@ -24,8 +24,8 @@ public class ChaosPower extends AbstractPower implements NonStackablePower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("LockHowlResources/images/powers/Knife84.png"), 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("LockHowlResources/images/powers/Knife32.png"), 0, 0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("LockHowlResources/images/powers/Chaos84.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("LockHowlResources/images/powers/Chaos32.png"), 0, 0, 32, 32);
         this.updateDescription();
     }
 
@@ -33,15 +33,16 @@ public class ChaosPower extends AbstractPower implements NonStackablePower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    public void atEndOfTurn() {
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
         this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
         if (this.amount == 1) {
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 6)));
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 7)));
         }
     }
 
     static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("LockHowl:Chaos");
+        powerStrings = CardCrawlGame.languagePack.getPowerStrings("LockHowl:ChaosPower");
         NAME = powerStrings.NAME;
         DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     }

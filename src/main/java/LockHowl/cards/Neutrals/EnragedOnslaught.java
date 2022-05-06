@@ -23,6 +23,7 @@ public class EnragedOnslaught extends CustomCard {
 
     public EnragedOnslaught() {
         super(ID, NAME, new RegionName("colorless/power/mayhem"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
+        this.isEthereal = true;
     }
 
     @Override

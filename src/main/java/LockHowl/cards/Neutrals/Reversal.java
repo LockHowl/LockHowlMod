@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.SlowPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
 public class Reversal extends CustomCard {
-    public static final String ID = "Good Instinct";
+    public static final String ID = "Good Instincts";
 
     public static final String _ID = "LockHowl:Reversal";
     public static final String NAME = languagePack.getCardStrings(_ID).NAME;
@@ -23,7 +23,6 @@ public class Reversal extends CustomCard {
     private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
-
 
     public Reversal() {
         super(ID, NAME, new RegionName("colorless/skill/good_instincts"), COST, DESC, TYPE, COLOR, RARITY, TARGET);

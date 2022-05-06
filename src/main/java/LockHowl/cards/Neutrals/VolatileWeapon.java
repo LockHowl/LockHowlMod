@@ -24,6 +24,7 @@ public class VolatileWeapon extends CustomCard {
 
     public VolatileWeapon() {
         super(ID, NAME, new RegionName("colorless/power/sadistic_nature"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
+        this.isEthereal = true;
     }
 
     @Override

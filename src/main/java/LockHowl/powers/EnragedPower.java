@@ -33,20 +33,18 @@ public class EnragedPower extends AbstractPower {
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
 
-            int RNG = AbstractDungeon.cardRandomRng.random(0, 5);
+            int RNG = AbstractDungeon.cardRandomRng.random(0, 4);
 
             switch (RNG) {
                 case 0: addToTop(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount)));
                     break;
-                case 1: addToTop(new ApplyPowerAction(this.owner, this.owner, new DoubleDamagePower(this.owner, this.amount, false)));
+                case 1: addToTop(new ApplyPowerAction(this.owner, this.owner, new MetallicizePower(this.owner, this.amount)));
                     break;
-                case 2: addToTop(new ApplyPowerAction(this.owner, this.owner, new DoubleTapPower(this.owner, this.amount)));
+                case 2: addToTop(new ApplyPowerAction(this.owner, this.owner, new PlatedArmorPower(this.owner, this.amount)));
                     break;
                 case 3: addToTop(new ApplyPowerAction(this.owner, this.owner, new ThornsPower(this.owner, this.amount)));
                     break;
-                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new PlatedArmorPower(this.owner, this.amount)));
-                    break;
-                case 5: addToTop(new ApplyPowerAction(this.owner, this.owner, new FlameBarrierPower(this.owner, this.amount)));
+                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new FlameBarrierPower(this.owner, this.amount)));
                     break;
                 default: break;
             }

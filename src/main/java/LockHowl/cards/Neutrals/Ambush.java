@@ -33,6 +33,7 @@ public class Ambush extends CustomCard {
     public Ambush() {
         super(ID, NAME, new RegionName("colorless/attack/dramatic_entrance"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = DAMAGE;
+        this.isInnate = true;
         this.exhaust = true;
     }
 
@@ -40,7 +41,7 @@ public class Ambush extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADED_DAMAGE);
+            this.upgradeDamage(UPGRADED_DAMAGE);
         }
     }
 

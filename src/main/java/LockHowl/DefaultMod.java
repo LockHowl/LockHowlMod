@@ -22,7 +22,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import LockHowl.cards.*;
-import LockHowl.characters.TheDefault;
 import LockHowl.events.IdentityCrisisEvent;
 import LockHowl.potions.PlaceholderPotion;
 import LockHowl.util.IDCheckDontTouchPls;
@@ -199,14 +198,16 @@ public class DefaultMod implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+        //logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
         
+/*
         BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
-        
+*/
+
         logger.info("Done creating the color");
         
         
@@ -283,6 +284,7 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditCharacters() {
+/*
         logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
         
         BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
@@ -290,6 +292,7 @@ public class DefaultMod implements
         
         receiveEditPotions();
         logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+*/
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -345,13 +348,17 @@ public class DefaultMod implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
+/*
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
             .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
             .create();
+*/
 
         // Add the event
+/*
         BaseMod.addEvent(eventParams);
+*/
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -367,7 +374,7 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID);
         
         logger.info("Done editing potions");
     }
@@ -389,9 +396,9 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
+        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
+        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
 
         BaseMod.addRelic(new LeakingBattery(), RelicType.BLUE);
 

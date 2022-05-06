@@ -29,8 +29,8 @@ public class Replenish extends AbstractDynamicCard {
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int DAMAGE = 11;
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_DAMAGE = 2;
     private static int LOST_HP = 0;
     private static final int HEALING = 1;
     private static final int UPGRADE_HEALING = 1;
@@ -60,6 +60,10 @@ public class Replenish extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.RED.cpy()), 0.1F));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new HealAction(p, p, this.magicNumber));
+
         for (int i = 0; i < this.defaultBaseSecondMagicNumber; i++) {
             this.addToBot(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY - 40.0F * Settings.scale, Color.RED.cpy()), 0.1F));
             this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));

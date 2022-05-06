@@ -23,6 +23,7 @@ public class Adaptation extends CustomCard {
 
     public Adaptation() {
         super(ID, NAME, new CustomCard.RegionName("colorless/power/panache"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
+        this.isEthereal = true;
     }
 
     @Override

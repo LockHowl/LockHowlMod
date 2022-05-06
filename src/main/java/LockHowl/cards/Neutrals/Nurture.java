@@ -1,4 +1,4 @@
-package LockHowl.cards.Silent;
+package LockHowl.cards.Neutrals;
 
 import LockHowl.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,7 +21,7 @@ public class Nurture extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("cFlower.png");
     private static final int COST = 1;
     private static final AbstractCard.CardType TYPE = CardType.SKILL;
-    private static final AbstractCard.CardColor COLOR = AbstractCard.CardColor.GREEN;
+    private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.NONE;
 

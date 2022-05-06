@@ -18,13 +18,84 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
   },
   {
+    "PROPER_NAME": "Burden",
     "NAMES": [
-      "Burden"
+      "Burden",
+      "burden",
+      "Burden."
     ],
     "DESCRIPTION": "Can only be played by being discarded through a Scry effect."
   },
   {
-    "NAMES": ["Charge"],
+    "PROPER_NAME": "Charge",
+    "NAMES": [
+      "Charge",
+      "charge"
+    ],
     "DESCRIPTION": "This card needs to be upgraded to unlock its effect."
+  },
+  {
+    "PROPER_NAME": "Purge",
+    "NAMES": [
+      "Purge",
+      "purge"
+    ],
+    "DESCRIPTION": "This card is removed from your deck when played."
+  },
+  {
+  "PROPER_NAME": "Rigged",
+  "NAMES": [
+    "Rigged",
+    "rigged"
+  ],
+  "DESCRIPTION": "Use a detonator to deal this enemy damage equal to the rigged amount."
+  },
+  {
+    "PROPER_NAME": "Inner Demons",
+    "NAMES": [
+      "Inner Demons",
+      "inner demons",
+      "inner_demons"
+    ],
+    "DESCRIPTION": "Use Release to deal damage to a random enemy equal to your inner demons."
+  },
+  {
+    "PROPER_NAME": "Volatile Weapon",
+    "NAMES": [
+      "Volatile Weapon",
+      "Volatile_Weapon",
+      "volatile weapon",
+      "volatile_weapon"
+    ],
+    "DESCRIPTION": "Apply a random debuff to an enemy when dealing unblocked damage."
+  },
+  {
+    "PROPER_NAME": "Enraged",
+    "NAMES": [
+      "Enraged",
+      "enraged",
+      "Enraged."
+    ],
+    "DESCRIPTION": "Apply a random buff to yourself when dealing unblocked damage."
+  },
+  {
+    "PROPER_NAME": "Adaptation",
+    "NAMES": [
+      "Adaptation",
+      "adaptation",
+      "Adaptation."
+    ],
+    "DESCRIPTION": "When gaining block, gain a random buff."
+  },
+  {
+    "PROPER_NAME": "Magnetic Weapons",
+    "NAMES": [
+      "Magnetic Weapons",
+      "Magnetic_Weapons",
+      "magnetic weapons",
+      "magnetic_weapons"
+    ],
+    "DESCRIPTION": "Gain gold when dealing unblocked damage."
   }
+
 ]

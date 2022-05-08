@@ -2,6 +2,7 @@ package LockHowl.cards.Neutrals;
 
 import LockHowl.actions.CardCloneAction;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +23,7 @@ public class Clarity extends CustomCard {
 
     public Clarity() {
         super(ID, NAME, new RegionName("colorless/skill/enlightenment"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
-        purgeOnUse = true;
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override

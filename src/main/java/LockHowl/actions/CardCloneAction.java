@@ -134,6 +134,7 @@ public class CardCloneAction extends AbstractGameAction{
 
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
+
             this.isDone = true;
             return;
         }

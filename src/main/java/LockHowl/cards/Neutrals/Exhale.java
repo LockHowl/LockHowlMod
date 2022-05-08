@@ -3,6 +3,8 @@ package LockHowl.cards.Neutrals;
 import LockHowl.actions.CardCloneAction;
 import LockHowl.actions.CardDestroyAction;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
+import com.evacipated.cardcrawl.mod.stslib.patches.FleetingPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,7 +26,7 @@ public class Exhale extends CustomCard {
 
     public Exhale() {
         super(ID, NAME, new RegionName("colorless/skill/deep_breath"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
-        purgeOnUse = true;
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override
@@ -56,6 +58,7 @@ public class Exhale extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(this.upgraded) {
             addToBot(new CardDestroyAction(1, false, false, false));
+
         }
     }
 }

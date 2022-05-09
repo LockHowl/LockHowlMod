@@ -76,7 +76,7 @@
   },
   "LockHowl:Nurture": {
     "NAME": "Nurture",
-    "DESCRIPTION": "{@@}Discard 1 card. NL Next turn, gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]} and draw !LockHowl:SecondMagic! cards."
+    "DESCRIPTION": "{@@}Next turn, gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]} and draw !LockHowl:SecondMagic! cards."
   },
   "LockHowl:Opportunity": {
     "NAME": "Opportunity",
@@ -117,7 +117,7 @@
   },
   "LockHowl:Palm": {
     "NAME": "Palm Deflection",
-    "DESCRIPTION": "Apply !M! Mark to each enemy. NL Gain !M! Block for each enemy."
+    "DESCRIPTION": "Gain !B! Block for each enemy."
   },
   "LockHowl:Delve": {
     "NAME": "Delve Destiny",
@@ -125,8 +125,8 @@
   },
   "LockHowl:Explosive": {
     "NAME": "Plant Explosives",
-    "DESCRIPTION": "Apply !M! lockhowl:Rigged. Add a Detonator to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Apply !M! lockhowl:Rigged. Add a Detonator to your draw pile."
+    "DESCRIPTION": "Apply !M! lockhowl:Rigged. Add a *Detonate to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Apply !M! lockhowl:Rigged. Add a *Detonate to your draw pile."
   },
   "LockHowl:Detonator": {
     "NAME": "Detonate",
@@ -138,33 +138,33 @@
   },
   "LockHowl:Release": {
     "NAME": "Release",
-    "DESCRIPTION": "Deal damage equal to your lockhowl:Inner_Demons to a random enemy."
+    "DESCRIPTION": "Deal damage equal to your *Inner *Demons to a random enemy."
   },
   "LockHowl:Flash": {
     "NAME": "Flashbang",
     "DESCRIPTION": "If a non-boss, non-elite enemy intends to attack, apply 1 Stun to it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "If a non-boss, non-elite enemy intends to attack, apply 1 Stun to it.",
+    "UPGRADE_DESCRIPTION": "If a non-boss enemy intends to attack, apply 1 Stun to it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["The target is a boss.", "The target is an elite.", "The target does not intend to attack."]
   },
   "LockHowl:Sabotage": {
     "NAME": "Sabotage",
-    "DESCRIPTION": "Apply !M! Slow.",
+    "DESCRIPTION": "Apply !M! lockhowl:Slow.",
     "UPGRADE_DESCRIPTION": "Innate. NL Apply !M! Slow."
   },
   "LockHowl:Volatile": {
     "NAME": "Volatility",
-    "DESCRIPTION": "Gain 1 lockhowl:Volatile_Weapon. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 lockhowl:Volatile_Weapon. NL Ethereal."
+    "DESCRIPTION": "Apply Weak, Vulnerable, Choked, Poison or Reduce Strength when dealing unblocked damage. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Unblocked Attacks have a chance of applying Weak, Vulnerable, Choked, Poison or Reduce Strength. NL Ethereal."
   },
   "LockHowl:Enraged": {
     "NAME": "Enraged Onslaught",
-    "DESCRIPTION": "Gain 1 lockhowl:Enraged. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 lockhowl:Enraged. NL Ethereal."
+    "DESCRIPTION": "Gain Metallicize, Plated Armor, Thorns, Flame Barrier or Strength when dealing unblocked damage. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain Metallicize, Plated Armor, Thorns, Flame Barrier or Strength when dealing unblocked damage. NL Ethereal."
   },
   "LockHowl:Skin": {
     "NAME": "Adaptation",
-    "DESCRIPTION": "Gain 1 lockhowl:Adaptation. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 lockhowl:Adaptation. NL Ethereal."
+    "DESCRIPTION": "Gain Dexterity, *Energized, *Draw *Card, Artifact, or Mantra when gaining Block. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain Dexterity, *Energized, *Draw *Card, Artifact, or Mantra when gaining Block. NL Ethereal."
   },
   "LockHowl:Steel": {
     "NAME": "Silver Trail",
@@ -172,7 +172,7 @@
   },
   "LockHowl:Magnetic": {
     "NAME": "Magnetic Weapons",
-    "DESCRIPTION": "Gain !M! lockhowl:Magnetic_Weapons."
+    "DESCRIPTION": "Steal !M! *Gold when dealing unblocked damage."
   },
   "LockHowl:Cocoon": {
     "NAME": "Cocoon",
@@ -185,7 +185,7 @@
   },
   "LockHowl:Time": {
     "NAME": "Borrowed Time",
-    "DESCRIPTION": "{@@}Gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]}. NL Add a Void to your draw pile."
+    "DESCRIPTION": "{@@}Gain {!M!|-1,1=[E]|2=[E] [E]|3=[E] [E] [E]|4=[E] [E] [E] [E]|5=[E] [E] [E] [E] [E]|@=!M! [E]} and draw !M! cards. NL Add a Void to your draw pile. NL Exhaust."
   },
   "LockHowl:Greed": {
     "NAME": "Burial of Gold",
@@ -197,14 +197,14 @@
   },
   "LockHowl:Dissolution": {
     "NAME": "Dissolution",
-    "DESCRIPTION": "Exhaust a card in your hand and gain a potion of the matching type. NL Exhaust."
+    "DESCRIPTION": "Exhaust a card in your hand and if it is an Attack, Skill or Power, gain a potion matching its type. NL Exhaust."
   },
   "LockHowl:Blood": {
     "NAME": "Blood Arts",
-    "DESCRIPTION": "Lose !M! HP. Your next attack deals double damage. NL Exhaust."
+    "DESCRIPTION": "Lose !M! HP. Your attacks deal double damage this turn. NL Exhaust."
   },
   "LockHowl:Chain": {
-    "NAME": "Chain Hold",
+    "NAME": "Chain Grab",
     "DESCRIPTION": "If enemy intends to attack, it loses !M! Strength next turn and you gain !M! Strength. NL Exhaust."
   },
   "LockHowl:Respite": {
@@ -219,12 +219,12 @@
   "LockHowl:Clarity": {
     "NAME": "Clarity",
     "DESCRIPTION": "lockhowl:Charge.",
-    "UPGRADE_DESCRIPTION": "Copy a card in your hand PERMANENTLY. NL lockhowl:Purge."
+    "UPGRADE_DESCRIPTION": "Copy a card in your hand permanently. NL lockhowl:Purge."
   },
   "LockHowl:Exhale": {
     "NAME": "Exhale",
     "DESCRIPTION": "lockhowl:Charge.",
-    "UPGRADE_DESCRIPTION": "Remove a card from your deck PERMANENTLY. NL lockhowl:Purge."
+    "UPGRADE_DESCRIPTION": "Remove a card from your deck permanently. NL lockhowl:Purge."
   },
   "LockHowl:Unfair": {
     "NAME": "Unfair Game",

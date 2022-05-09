@@ -17,7 +17,7 @@ public class UnfairGame extends CustomCard {
     public static final String _ID = "LockHowl:Unfair";
     public static final String NAME = languagePack.getCardStrings(_ID).NAME;
     public static final String DESC = languagePack.getCardStrings(_ID).DESCRIPTION;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final AbstractCard.CardType TYPE = CardType.SKILL;
     private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
@@ -33,7 +33,7 @@ public class UnfairGame extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 

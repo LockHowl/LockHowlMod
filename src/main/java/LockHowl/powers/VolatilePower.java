@@ -39,7 +39,7 @@ public class VolatilePower extends AbstractPower {
             int RNG = AbstractDungeon.cardRandomRng.random(0, 4);
 
             switch (RNG) {
-                case 0: addToTop(new ApplyPowerAction(target, this.owner, new PoisonPower(target, this.owner, this.amount)));;
+                case 0: addToTop(new ApplyPowerAction(target, this.owner, new PoisonPower(target, this.owner, this.amount*3)));;
                     break;
                 case 1: addToTop(new ApplyPowerAction(target, this.owner, new StrengthPower(target, -this.amount)));
                     break;
@@ -47,7 +47,7 @@ public class VolatilePower extends AbstractPower {
                     break;
                 case 3: addToTop(new ApplyPowerAction(target, this.owner, new WeakPower(target, this.amount, false)));
                     break;
-                case 4: addToTop(new ApplyPowerAction(target, this.owner, new ChokePower(target, this.amount)));
+                case 4: addToTop(new ApplyPowerAction(target, this.owner, new ChokePower(target, this.amount*2)));
                     break;
                 default: break;
             }

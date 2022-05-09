@@ -19,7 +19,7 @@ public class Hesitation extends AbstractDynamicCard implements WhenScriedUse {
     private static final int COST = -2;
     private static final AbstractCard.CardType TYPE = CardType.ATTACK;
     private static final AbstractCard.CardColor COLOR = CardColor.PURPLE;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     private static final int DAMAGE = 11;

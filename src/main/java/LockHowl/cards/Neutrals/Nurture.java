@@ -45,7 +45,6 @@ public class Nurture extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DiscardAction(p, p, 1, false));
         addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, 1), 1));
         addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.defaultBaseSecondMagicNumber), this.defaultBaseSecondMagicNumber));
     }

@@ -1,6 +1,7 @@
 package LockHowl.cards.Neutrals;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,12 +24,12 @@ public class BorrowedTime extends CustomCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;
 
-    private static final int ENERGY = 2;
-    private static final int UPGRADED_ENERGY = 1;
+    private static final int CARD_ENERGY = 2;
+    private static final int UPGRADED_CARD_ENERGY = 1;
 
     public BorrowedTime() {
         super(ID, NAME, new RegionName("colorless/skill/impatience"), COST, DESC, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = ENERGY;
+        this.magicNumber = this.baseMagicNumber = CARD_ENERGY;
         this.exhaust = true;
         this.cardsToPreview = new VoidCard();
     }
@@ -37,13 +38,14 @@ public class BorrowedTime extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADED_ENERGY);
+            this.upgradeMagicNumber(UPGRADED_CARD_ENERGY);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainEnergyAction(this.magicNumber));
+        addToBot(new DrawCardAction(this.magicNumber));
         addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
 

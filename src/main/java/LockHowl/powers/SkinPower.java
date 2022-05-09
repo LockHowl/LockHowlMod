@@ -42,7 +42,7 @@ public class SkinPower extends AbstractPower {
                     break;
                 case 3: addToTop(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount)));
                     break;
-                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new MantraPower(this.owner, this.amount)));
+                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new MantraPower(this.owner, this.amount*2)));
                     break;
                 default: break;
             }

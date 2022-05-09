@@ -96,6 +96,22 @@
       "magnetic_weapons"
     ],
     "DESCRIPTION": "Gain gold when dealing unblocked damage."
+  },
+  {
+    "PROPER_NAME": "Acid",
+    "NAMES": [
+      "Acid",
+      "acid"
+    ],
+    "DESCRIPTION": "Orb: Increases Poison every turn. When Evoked, apply Poison to enemy with highest HP."
+  },
+  {
+    "PROPER_NAME": "Slow",
+    "NAMES": [
+      "Slow",
+      "slow"
+    ],
+    "DESCRIPTION": "For every card you have played this turn, enemy takes 10% more damage from Attacks."
   }
 
 ]

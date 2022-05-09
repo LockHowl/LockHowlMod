@@ -40,11 +40,11 @@ public class EnragedPower extends AbstractPower {
                     break;
                 case 1: addToTop(new ApplyPowerAction(this.owner, this.owner, new MetallicizePower(this.owner, this.amount)));
                     break;
-                case 2: addToTop(new ApplyPowerAction(this.owner, this.owner, new PlatedArmorPower(this.owner, this.amount)));
+                case 2: addToTop(new ApplyPowerAction(this.owner, this.owner, new PlatedArmorPower(this.owner, this.amount*2)));
                     break;
-                case 3: addToTop(new ApplyPowerAction(this.owner, this.owner, new ThornsPower(this.owner, this.amount)));
+                case 3: addToTop(new ApplyPowerAction(this.owner, this.owner, new ThornsPower(this.owner, this.amount*2)));
                     break;
-                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new FlameBarrierPower(this.owner, this.amount)));
+                case 4: addToTop(new ApplyPowerAction(this.owner, this.owner, new FlameBarrierPower(this.owner, this.amount*3)));
                     break;
                 default: break;
             }

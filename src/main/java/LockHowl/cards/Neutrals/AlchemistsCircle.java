@@ -23,8 +23,8 @@ public class AlchemistsCircle extends CustomCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;
 
-    private static final int GOLD = 4;
-    private static final int UPGRADED_GOLD = 2;
+    private static final int GOLD = 6;
+    private static final int UPGRADED_GOLD = 3;
 
     public AlchemistsCircle() {
         super(ID, NAME, new RegionName("colorless/skill/transmutation"), COST, DESC, TYPE, COLOR, RARITY, TARGET);

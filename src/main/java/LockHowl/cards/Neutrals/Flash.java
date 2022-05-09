@@ -34,7 +34,7 @@ public class Flash extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null && m.type != AbstractMonster.EnemyType.BOSS && m.type != AbstractMonster.EnemyType.ELITE && m.getIntentBaseDmg() > 0) {
+        if (m != null && m.type != AbstractMonster.EnemyType.BOSS && (m.type != AbstractMonster.EnemyType.ELITE  || this.upgraded) && m.getIntentBaseDmg() > 0) {
             addToBot(new StunMonsterAction(m, p, magicNumber));
         }
         else if (m.type == AbstractMonster.EnemyType.BOSS)
@@ -56,7 +56,6 @@ public class Flash extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.rawDescription = languagePack.getCardStrings(_ID).UPGRADE_DESCRIPTION;
-            this.exhaust = false;
             initializeDescription();
 
         }
